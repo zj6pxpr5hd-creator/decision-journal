@@ -18,7 +18,7 @@
 ======================*/
 :root{
   --bg: #0b0b0b;
-  --card-bg: #1010109f;
+  --card-bg: rgba(16, 16, 16, 0.719);
   --input: #2f2f2f;
   --text: #f5f5f5;
   --muted:  #9ca3af;
@@ -71,9 +71,9 @@ input::placeholder{
 }
 
 .save-button{
-  background-color: var(--input);
+  background-color: transparent;
+  border: 1px solid var(--muted);
   color: var(--text);
-  border: none;
   border-radius: 1rem;
   padding: 1rem 2rem;
   font-size: 1rem;
@@ -82,8 +82,12 @@ input::placeholder{
   margin-top: 2rem;
 }
 
+
+
+
 .save-button:hover{
-  background-color: var(--muted);
+  background-color: var(--card-bg);
+  border: 1px solid var(--muted);
 }
 
 select{
@@ -114,17 +118,17 @@ option{
   max-width: 50rem;
 }
 
-
 .decision-card{
-  border-bottom: 1px solid var(--input);
+  border-top: 1px solid var(--input);
   padding: 2rem;
   margin-bottom: 2rem;
   border-radius: 5px;
+  background-color: var(--card-bg);
 }
 
 .reason-section{
-  margin-top: 1rem;
-  padding: 0 5rem;
+  margin: 1rem 0 1rem 0;
+  padding: 1rem 5rem;
   text-align: left;
 }
 
@@ -133,6 +137,11 @@ option{
   padding: 0 5rem;
   text-align: left;
   
+}
+
+.small-title{
+  font-weight: 600;
+  padding-right: 2rem;
 }
 
 
