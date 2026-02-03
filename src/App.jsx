@@ -2,7 +2,7 @@ import './App.css'
 import Header from './components/Header'
 import DecisionForm from './components/DecisionForm'
 import DecisionList from './components/DecisionList'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 /* a personal log to record important decisions, the reasoning behind them, and review outcomes over time 
 
@@ -22,13 +22,20 @@ import { useState } from 'react'
 
 function App() {
 
-  const [decisions, setDecisions] = useState([]);
+  const [decisions, setDecisions] = useState(
+    () => {
+      const saved = localStorage.getItem("decisions");
+      return saved ? JSON.parse(saved) : [];
+    }
+  );
 
   const addDecision = (decision) => {
-
     setDecisions(prev => [...prev, decision]);
-
   }
+
+  useEffect(() => {
+    localStorage.setItem("decisions", JSON.stringify(decisions));
+  }, [decisions]);
 
   return (
     <>
