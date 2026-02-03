@@ -12,6 +12,130 @@
   }
 }
 
+
+/* =====================
+        Header
+======================*/
+:root{
+  --bg: #0b0b0b;
+  --card-bg: #1010109f;
+  --input: #2f2f2f;
+  --text: #f5f5f5;
+  --muted:  #9ca3af;
+  --accent: #ef4444;
+}
+
+.title{
+  font-size: 5rem;
+  color: var(--muted);
+  border-bottom: 1px solid var(--muted);
+}
+
+.big-let{
+  font-size: 6.5rem;
+  color: var(--text);
+}
+
+/*===================
+  Decision Form
+====================*/
+
+.form-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding:  4rem 0  15rem;
+}
+ 
+
+input{
+  display: block;
+  margin: 1rem 0;  
+  background-color: var(--input);
+  color: var(--text);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: 1px solid var(--input);
+  border-radius: 1rem;
+  width: 50rem;
+  height: 3.5rem;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+input::placeholder{
+  color: var(--text);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.save-button{
+  background-color: var(--input);
+  color: var(--text);
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.save-button:hover{
+  background-color: var(--muted);
+}
+
+select{
+  display: block;
+  margin: 1rem 0;  
+  background-color: var(--input);
+  color: var(--text);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: 1px solid var(--input);
+  border-radius: 1rem;
+  width: 50rem;
+  height: 3.5rem;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+option{
+  color: var(--text);
+}
+
+/*=======================
+      Decision List
+========================*/
+
+
+.decision-list{
+  max-width: 50rem;
+}
+
+
+.decision-card{
+  border-bottom: 1px solid var(--input);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+}
+
+.reason-section{
+  margin-top: 1rem;
+  padding: 0 5rem;
+  text-align: left;
+}
+
+.confidence-section{
+  margin-top: 1rem;
+  padding: 0 5rem;
+  text-align: left;
+  
+}
+
+
 /*
 =========================
   CUSTOM STYLES
@@ -37,13 +161,18 @@
 body{
   margin: 0;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #111;
-  color: #fafafa;
+  background-color: var(--bg);
   line-height: 1.6;
 }
 
-section, header{
-  padding: 2rem 0;
+.container{
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+section{
+  margin-bottom: 3rem;
 }
 
 h1{
@@ -54,75 +183,4 @@ h1{
 h2{
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
-}
-
-/* =====================
-        Header
-======================*/
-
-.title{
-  font-size: 5rem;
-}
-
-.big-let{
-  font-size: 6.5rem;
-}
-
-/*===================
-  Decision Form
-====================*/
-
-.form-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  padding:  4rem 0  15rem;
-}
- 
-
-input{
-  display: block;
-  margin: 1rem 0;  
-  background-color: #2f2f2f;
-  color: #b9b9b9;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  border: 1px solid rgb(50, 50, 50);
-  border-radius: 1rem;
-  width: 50rem;
-  height: 3.5rem;
-  padding: 2rem;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-input::placeholder{
-  color: #b9b9b9;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.save-button{
-  background-color: #7b7b7b;
-  color: white;
-  border: none;
-  border-radius: 1rem;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 2rem;
-}
-
-.save-button:hover{
-  background-color: #a9a9a9;
-}
-
-/*=======================
-      Decision List
-========================*/
-
-
-.decision-list{
-  max-width: 50rem;
 }
