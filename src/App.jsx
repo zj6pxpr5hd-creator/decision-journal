@@ -2,6 +2,7 @@ import './App.css'
 import Header from './components/Header'
 import DecisionForm from './components/DecisionForm'
 import DecisionList from './components/DecisionList'
+import { useState } from 'react'
 
 /* a personal log to record important decisions, the reasoning behind them, and review outcomes over time 
 
@@ -19,14 +20,21 @@ import DecisionList from './components/DecisionList'
 
 */
 
-
 function App() {
+
+  const [decisions, setDecisions] = useState([]);
+
+  const addDecision = (decision) => {
+
+    setDecisions(prev => [...prev, decision]);
+
+  }
 
   return (
     <>
       <Header />
-      <DecisionForm />
-      <DecisionList />
+      <DecisionForm addDecision={addDecision}/>
+      <DecisionList decisions={decisions} />
     </>
   )
 }

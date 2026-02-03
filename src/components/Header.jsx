@@ -1,8 +1,7 @@
 function Header(){
     return(
         <header>
-            <h1>Decision Journal</h1>
-            
+            <h1 className="title"><span className="big-let">D</span>ecision <span className="big-let">J</span>ournal</h1> 
         </header>
     )
 

@@ -20,6 +20,18 @@
 
 *{
   box-sizing: border-box;
+  /*&::-webkit-scrollbar-thumb{
+    background-color: blue;
+    border-radius: red;
+  }*/
+  &::-webkit-scrollbar-track{
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar{
+    width: 4px;
+    height: 4px;
+    background-color: transparent;
+  }
 }
 
 body{
@@ -31,7 +43,7 @@ body{
 }
 
 section, header{
-  margin-bottom: 4rem;
+  padding: 2rem 0;
 }
 
 h1{
@@ -44,6 +56,17 @@ h2{
   margin-bottom: 0.5rem;
 }
 
+/* =====================
+        Header
+======================*/
+
+.title{
+  font-size: 5rem;
+}
+
+.big-let{
+  font-size: 6.5rem;
+}
 
 /*===================
   Decision Form
@@ -55,23 +78,51 @@ h2{
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  padding:  4rem 0  15rem;
 }
-
  
 
 input{
   display: block;
-  margin: 0.5rem 0;  
-  background-color: #1B1B1B;
-  color: #fafafa;
-  border-radius: 0.2rem;
+  margin: 1rem 0;  
+  background-color: #2f2f2f;
+  color: #b9b9b9;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: 1px solid rgb(50, 50, 50);
+  border-radius: 1rem;
   width: 50rem;
   height: 3.5rem;
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
+  font-size: 1.2rem;
 }
 
 input::placeholder{
-  color: white;
+  color: #b9b9b9;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.save-button{
+  background-color: #7b7b7b;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.save-button:hover{
+  background-color: #a9a9a9;
+}
+
+/*=======================
+      Decision List
+========================*/
+
+
+.decision-list{
+  max-width: 50rem;
 }
