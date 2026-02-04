@@ -15,9 +15,6 @@ import { useEffect, useState } from 'react'
   2. save with datein localStorage
   
   3. show list of past decisions
-
-
-
 */
 
 function App() {
